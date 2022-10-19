@@ -3,7 +3,7 @@
 A classic Memory Game 
 
 
-### A Memory Game using classic apple emojis
+### A Memory Game using images from Runescape
 
 
 ![Wireframe](Images/memory-wireframe.png)
