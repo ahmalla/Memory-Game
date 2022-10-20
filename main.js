@@ -2,7 +2,7 @@
 
 const main = document.querySelector('main');
 const playerHitpointCount = document.querySelector('span');
-let playerHitpoints = 10;
+let playerHitpoints = 5;
 
 // setting up dom elements
 
@@ -46,7 +46,7 @@ cardData.forEach((item, index) => {
     const front = document.createElement('img');
     const back = document.createElement('div');
     card.classList = 'card';
-    front.classList = 'face';
+    front.classList = 'front';
     back.classList = 'back';
     // attach card sources to the card spaces
     front.src = item.imgSrc;
@@ -74,18 +74,17 @@ if (flippedCards.length === 2) {
         console.log('match');
         flippedCards.forEach((card) => {
             card.classList.remove('flipped');
-            card.getElementsByClassName.pointerEvents = 'none';
+            card.style.pointerEvents = 'none';
         });
     } else {
         console.log('wrong');
         flippedCards.forEach((card) => {
             card.classList.remove('flipped');
-            setTimeout(() =>  card.classList.remove('toggleCard'), 1000);
-           
+            setTimeout(() => card.classList.remove('toggleCard'), 1000);
         });
         playerHitpoints--;
         playerHitpointCount.textContent = playerHitpoints;
-        if(playerHitpoints === 0) {
+        if (playerHitpoints === 0) {
             restart();
         }
     }
@@ -97,11 +96,18 @@ const restart = () => {
     let front = document.querySelectorAll('.front');
     let cards = document.querySelectorAll('.card');
     cardData.forEach((item, index) => {
+        // if we lose flip all cards back over
         cards[index].classList.remove('toggleCard');
-        // set pointer event back to all after a game reset
+        
+        setTimeout(() => {
+            // set pointer event back to all after a game reset
         cards[index].style.pointerEvents = 'all';
+        // re-shuffle after losing
+        front[index].src = item.imgSrc;
+        cards[index].setAttribute('name', item.name);
+        }, 100);
     });
-    playerHitpoints = 10;
+    playerHitpoints = 5;
     playerHitpointCount.textContent = playerHitpoints;
 };
 

@@ -45,3 +45,8 @@ body {
 .toggleCard {
     transform: rotateY(180deg);
 }
+
+.front {
+    height: 50%;
+    width: 50%;
+}
