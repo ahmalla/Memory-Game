@@ -30,9 +30,10 @@ const getData = () => [
     {imgSrc: 'Images/santahat.png', name: 'santa'},
 ];
 
-
+// shuffle function
 const shuffle = () => {
     const cardData = getData();
+    cardData.sort(() => Math.random() - 0.5);
     console.log(cardData);
 };
 shuffle();
