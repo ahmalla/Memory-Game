@@ -67,6 +67,7 @@ const checkCards = (a) => {
     const clickedCard = a.target;
     clickedCard.classList.add('flipped');
     const flippedCards = document.querySelectorAll('.flipped');
+    const toggleCard = document.querySelectorAll('.toggleCard');
     
     // function
 if (flippedCards.length === 2) {
@@ -85,16 +86,22 @@ if (flippedCards.length === 2) {
         playerHitpoints--;
         playerHitpointCount.textContent = playerHitpoints;
         if (playerHitpoints === 0) {
-            restart();
+            restart('Try Again!');
         }
     }
  }
+//  check if we won
+if(toggleCard.length === 16) {
+    restart('You won!')
+}
 };
 // restart game
-const restart = () => {
+const restart = (text) => {
     let cardData = shuffle();
     let front = document.querySelectorAll('.front');
     let cards = document.querySelectorAll('.card');
+    // disable clicks while game restarts
+    main.style.pointerEvents = 'none';
     cardData.forEach((item, index) => {
         // if we lose flip all cards back over
         cards[index].classList.remove('toggleCard');
@@ -104,11 +111,15 @@ const restart = () => {
         cards[index].style.pointerEvents = 'all';
         // re-shuffle after losing
         front[index].src = item.imgSrc;
+        // assign appropriate name attribute after reshuffle
         cards[index].setAttribute('name', item.name);
-        }, 100);
+        // re enable clicks
+        main.style.pointerEvents = 'all';
+        }, 1000);
     });
     playerHitpoints = 5;
     playerHitpointCount.textContent = playerHitpoints;
+    setTimeout(() => window.alert(text), 100);
 };
 
 cardPopulator();
