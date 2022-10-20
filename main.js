@@ -125,7 +125,7 @@ const restart = (text) => {
     });
     playerHitpoints = 5;
     playerHitpointCount.textContent = playerHitpoints;
-    setTimeout(() => document.getElementById('text').innerHTML = (text), 1000);
+    setTimeout(() => document.getElementById('text').innerHTML = (text), 100);
 };
 
 
