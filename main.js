@@ -30,3 +30,9 @@ const getData = () => [
     {imgSrc: 'Images/santahat.png', name: 'santa'},
 ];
 
+
+const shuffle = () => {
+    const cardData = getData();
+    console.log(cardData);
+};
+shuffle();
