@@ -1,14 +1,23 @@
 
 # Runescape-Memory-Game
-A classic Memory Game 
+A classic Memory Game!
+I have a created a memory game with the theme of Old School Runescape! I played OSRS a lot as a kid and thought it would be fun to create this nostalgic throwback.
 
-
-### A Memory Game using images from Runescape
 
 
 ![Wireframe](Images/memory-wireframe.png)
 
+![ScreenShot](Images/Screen_Shot_1.png)
+![ScreenShot2](Images/Screen_Shot_2.png)
 
+
+
+
+### Technologies Used
+
+* HTML
+* CSS
+* JavaScript
 
 /*----- constants -----*/
 - a constant to be used with box functions

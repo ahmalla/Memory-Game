@@ -54,4 +54,9 @@ body {
 p {
     font-size: 28pt;
     color: aliceblue;
+    
+}
+
+.disappear {
+    display: none;
 }

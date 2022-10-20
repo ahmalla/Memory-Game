@@ -60,6 +60,7 @@ const cardPopulator = () => {
         card.addEventListener('click', (a) => {
             card.classList.toggle('toggleCard');
             checkCards(a);
+
         });
     });
 };
@@ -73,13 +74,13 @@ const checkCards = (a) => {
     // function
     if (flippedCards.length === 2) {
         if (flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
-            console.log('match');
+            // console.log('match');
             flippedCards.forEach((card) => {
                 card.classList.remove('flipped');
                 card.style.pointerEvents = 'none';
             });
         } else {
-            console.log('wrong');
+            // console.log('wrong');
             flippedCards.forEach((card) => {
                 card.classList.remove('flipped');
                 setTimeout(() => card.classList.remove('toggleCard'), 1000);
@@ -108,7 +109,7 @@ const restart = (text) => {
     cardData.forEach((item, index) => {
         // if we lose flip all cards back over
         cards[index].classList.remove('toggleCard');
-        // document.querySelector('text').innerHTML = ' ';
+        
 
 
         setTimeout(() => {
@@ -124,9 +125,8 @@ const restart = (text) => {
     });
     playerHitpoints = 5;
     playerHitpointCount.textContent = playerHitpoints;
-    setTimeout(() => document.getElementById('text').innerHTML = (text), 100);
+    setTimeout(() => document.getElementById('text').innerHTML = (text), 1000);
 };
-
 
 
 cardPopulator();
