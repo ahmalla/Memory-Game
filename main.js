@@ -34,6 +34,26 @@ const getData = () => [
 const shuffle = () => {
     const cardData = getData();
     cardData.sort(() => Math.random() - 0.5);
-    console.log(cardData);
+    return cardData;
+    
 };
-shuffle();
+
+// creating cards function
+const cardPopulator = () => {
+    const cardData = shuffle();
+    // creating additional HTML elements to be used to make the cards
+cardData.forEach(item => {
+    console.log(item);
+});
+
+
+    const card = document.createElement('div');
+    const front = document.createElement('img');
+    const back = document.createElement('div');
+    card.classList = 'card';
+    front.classList = 'face';
+    back.classList = 'back';
+
+};
+
+cardPopulator();
