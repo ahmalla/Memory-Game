@@ -85,8 +85,24 @@ if (flippedCards.length === 2) {
         });
         playerHitpoints--;
         playerHitpointCount.textContent = playerHitpoints;
+        if(playerHitpoints === 0) {
+            restart();
+        }
     }
  }
+};
+// restart game
+const restart = () => {
+    let cardData = shuffle();
+    let front = document.querySelectorAll('.front');
+    let cards = document.querySelectorAll('.card');
+    cardData.forEach((item, index) => {
+        cards[index].classList.remove('toggleCard');
+        // set pointer event back to all after a game reset
+        cards[index].style.pointerEvents = 'all';
+    });
+    playerHitpoints = 10;
+    playerHitpointCount.textContent = playerHitpoints;
 };
 
 cardPopulator();
