@@ -2,7 +2,7 @@
 
 const main = document.querySelector('main');
 const playerHitpointCount = document.querySelector('span');
-let playerHitpoints = 10;
+let playerHitpoints = 5;
 
 // setting up dom elements
 playerHitpointCount.textContent = playerHitpoints;
@@ -102,12 +102,13 @@ const restart = (text) => {
     let cardData = shuffle();
     let front = document.querySelectorAll('.front');
     let cards = document.querySelectorAll('.card');
-
+    
     // disable clicks while game restarts
     main.style.pointerEvents = 'none';
     cardData.forEach((item, index) => {
         // if we lose flip all cards back over
         cards[index].classList.remove('toggleCard');
+        // document.querySelector('text').innerHTML = ' ';
 
 
         setTimeout(() => {
@@ -121,7 +122,7 @@ const restart = (text) => {
             main.style.pointerEvents = 'all';
         }, 1000);
     });
-    playerHitpoints = 10;
+    playerHitpoints = 5;
     playerHitpointCount.textContent = playerHitpoints;
     setTimeout(() => document.getElementById('text').innerHTML = (text), 100);
 };
