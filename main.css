@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
+}
+
+body {
+    height: 100vh;
+    background-image: url("https://oldschool.runescape.wiki/images/Gielinor_map_poster.png?b7bc5");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.front,
+.back {
+   
+
+}
