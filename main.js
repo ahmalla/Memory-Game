@@ -57,8 +57,14 @@ cardData.forEach(item => {
 
     card.addEventListener('click', (a) => {
         card.classList.toggle('toggleCard');
+        checkCards(a);
+        });
     });
-    });
+};
+// check for match
+const checkCards = (a) => {
+    const clickedCard = a.target;
+    console.log(clickedCard);
 };
 
 cardPopulator();
