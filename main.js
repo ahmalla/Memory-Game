@@ -49,6 +49,8 @@ cardData.forEach(item => {
     card.classList = 'card';
     front.classList = 'face';
     back.classList = 'back';
+    // attach card sources to the card spaces
+    front.src = item.imgSrc;
     // attatching the cards to the main
     main.appendChild(card);
     card.appendChild(front);
