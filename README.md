@@ -19,7 +19,7 @@ I have a created a memory game with the theme of Old School Runescape! I played 
 * CSS
 * JavaScript
 
-/*----- constants -----*/
+<!-- /*----- constants -----*/
 - a constant to be used with box functions
 - 
 
@@ -45,6 +45,6 @@ I have a created a memory game with the theme of Old School Runescape! I played 
 - a function that will deliever a win message upon clearing the board
 - a maxiumum click function for a win/lose variable. over 20 clicks you lose
 - a function that turns cards back over if no match after a certain amount of time -->
-- a function for shuffeling the boxes -->
+<!-- - a function for shuffeling the boxes 
 - a function that limits the amount of cards user is able to press at once
-- a function that disables the click after two cards have been matched then resets the isteners
+- a function that disables the click after two cards have been matched then resets the isteners -->

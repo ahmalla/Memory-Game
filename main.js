@@ -125,8 +125,17 @@ const restart = (text) => {
     });
     playerHitpoints = 5;
     playerHitpointCount.textContent = playerHitpoints;
+    
     setTimeout(() => document.getElementById('text').innerHTML = (text), 100);
+
+setTimeout(functionToRemoveInnerHTML, 1000);
+function functionToRemoveInnerHTML() {
+    document.getElementById("text").innerHTML = ""; 
 };
+
+};
+
+
 
 
 cardPopulator();
