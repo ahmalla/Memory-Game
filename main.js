@@ -3,7 +3,6 @@
 const main = document.querySelector('main');
 const playerHitpointCount = document.querySelector('span');
 let playerHitpoints = 5;
-
 // setting up dom elements
 
 playerHitpointCount.textContent = playerHitpoints;
@@ -86,6 +85,7 @@ if (flippedCards.length === 2) {
         playerHitpoints--;
         playerHitpointCount.textContent = playerHitpoints;
         if (playerHitpoints === 0) {
+            // document.querySelector('h1').innerText = 'Try Again'
             restart('Try Again!');
         }
     }
@@ -100,11 +100,13 @@ const restart = (text) => {
     let cardData = shuffle();
     let front = document.querySelectorAll('.front');
     let cards = document.querySelectorAll('.card');
+    
     // disable clicks while game restarts
     main.style.pointerEvents = 'none';
     cardData.forEach((item, index) => {
         // if we lose flip all cards back over
         cards[index].classList.remove('toggleCard');
+        
         
         setTimeout(() => {
             // set pointer event back to all after a game reset
@@ -121,5 +123,7 @@ const restart = (text) => {
     playerHitpointCount.textContent = playerHitpoints;
     setTimeout(() => window.alert(text), 100);
 };
+
+
 
 cardPopulator();
