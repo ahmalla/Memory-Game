@@ -43,17 +43,17 @@ const cardPopulator = () => {
     const cardData = shuffle();
     // creating additional HTML elements to be used to make the cards
 cardData.forEach(item => {
-    console.log(item);
-});
-
-
     const card = document.createElement('div');
     const front = document.createElement('img');
     const back = document.createElement('div');
     card.classList = 'card';
     front.classList = 'face';
     back.classList = 'back';
-
+    // attatching the cards to the main
+    main.appendChild(card);
+    card.appendChild(front);
+    card.appendChild(back);
+    });
 };
 
 cardPopulator();
