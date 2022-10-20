@@ -2,7 +2,7 @@
 
 const main = document.querySelector('main');
 const playerHitpointCount = document.querySelector('span');
-const playerHitpoints = 10;
+let playerHitpoints = 10;
 
 // setting up dom elements
 
@@ -41,7 +41,7 @@ const shuffle = () => {
 const cardPopulator = () => {
     const cardData = shuffle();
     // creating additional HTML elements to be used to make the cards
-cardData.forEach(item => {
+cardData.forEach((item, index) => {
     const card = document.createElement('div');
     const front = document.createElement('img');
     const back = document.createElement('div');
@@ -50,6 +50,7 @@ cardData.forEach(item => {
     back.classList = 'back';
     // attach card sources to the card spaces
     front.src = item.imgSrc;
+   card.setAttribute('name', item.name);
     // attatching the cards to the main
     main.appendChild(card);
     card.appendChild(front);
@@ -64,7 +65,28 @@ cardData.forEach(item => {
 // check for match
 const checkCards = (a) => {
     const clickedCard = a.target;
-    console.log(clickedCard);
+    clickedCard.classList.add('flipped');
+    const flippedCards = document.querySelectorAll('.flipped');
+    
+    // function
+if (flippedCards.length === 2) {
+    if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
+        console.log('match');
+        flippedCards.forEach((card) => {
+            card.classList.remove('flipped');
+            card.getElementsByClassName.pointerEvents = 'none';
+        });
+    } else {
+        console.log('wrong');
+        flippedCards.forEach((card) => {
+            card.classList.remove('flipped');
+            setTimeout(() =>  card.classList.remove('toggleCard'), 1000);
+           
+        });
+        playerHitpoints--;
+        playerHitpointCount.textContent = playerHitpoints;
+    }
+ }
 };
 
 cardPopulator();
