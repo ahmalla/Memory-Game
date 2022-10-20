@@ -38,7 +38,7 @@ body {
 }
 
 .back {
-    background: aliceblue;
+    background: lightslategray;
     backface-visibility: hidden;    
 }
 
@@ -49,4 +49,9 @@ body {
 .front {
     height: 50%;
     width: 50%;
+}
+
+p {
+    font-size: 28pt;
+    color: aliceblue;
 }
