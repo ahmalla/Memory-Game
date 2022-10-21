@@ -20,7 +20,7 @@ I have a created a memory game with the theme of Old School Runescape! I played 
 * JavaScript
 
 
-###Info
+### Info
 
 [Click-me!](https://ahmalla.github.io/Memory-Game/)
 
@@ -31,7 +31,7 @@ Game Instructions:
 - If you cannot make all matches before running out of HP, YOU LOSE.
 
 
-###Next Steps
+### Next Steps
 My next steps for this game would be, but not limited to:
 
 - Applying a cool animation for when two cards are incorrect before flipping back over.
