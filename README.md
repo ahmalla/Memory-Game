@@ -19,6 +19,26 @@ I have a created a memory game with the theme of Old School Runescape! I played 
 * CSS
 * JavaScript
 
+
+###Info
+
+[Click-me!](https://ahmalla.github.io/Memory-Game/)
+
+Game Instructions:
+
+- Match all pairs before running out of HP and you will win the game.
+- 8 matches in total.
+- If you cannot make all matches before running out of HP, YOU LOSE.
+
+
+###Next Steps
+My next steps for this game would be, but not limited to:
+
+- Applying a cool animation for when two cards are incorrect before flipping back over.
+- Add some cool styling to the win/lose messages.
+- Expanding the game board and potentially adding levels.
+
+
 <!-- /*----- constants -----*/
 - a constant to be used with box functions
 - 
