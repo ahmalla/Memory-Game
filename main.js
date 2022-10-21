@@ -128,7 +128,7 @@ const restart = (text) => {
 
     setTimeout(() => document.getElementById('text').innerHTML = (text), 100);
 
-    setTimeout(functionToRemoveInnerHTML, 1000);
+    setTimeout(functionToRemoveInnerHTML, 3000);
     function functionToRemoveInnerHTML() {
         document.getElementById("text").innerHTML = "";
     };
