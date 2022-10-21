@@ -2,7 +2,7 @@
 
 const main = document.querySelector('main');
 const playerHitpointCount = document.querySelector('span');
-let playerHitpoints = 5;
+let playerHitpoints = 10;
 
 // setting up dom elements
 playerHitpointCount.textContent = playerHitpoints;
@@ -123,7 +123,7 @@ const restart = (text) => {
             main.style.pointerEvents = 'all';
         }, 1000);
     });
-    playerHitpoints = 5;
+    playerHitpoints = 10;
     playerHitpointCount.textContent = playerHitpoints;
 
     setTimeout(() => document.getElementById('text').innerHTML = (text), 100);
